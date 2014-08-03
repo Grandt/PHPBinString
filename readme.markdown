@@ -30,6 +30,8 @@ Function calls in PHP are fairly expensive on their own, and if func_overload is
 functions exclusively in place of the built-in PHP string, to parse them as 'latin1', which is also expensive, cpu 
 wise.
 
+### Why the potential performance impact?
+
 PHP, like Java, have length aware strings, meaning the object header knows how long your string is. They are binary 
 safe, and not null (0x00) terminated.
 
